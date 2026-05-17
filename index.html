@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WanderLux Travel Agency – personalised holiday planning, guided tours, and custom travel packages for domestic and international destinations.">
+  <meta name="keywords" content="travel agency, holiday packages, guided tours, flights, hotels, honeymoon, WanderLux">
+  <title>Home | WanderLux Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="WanderLux home">Wander<span>Lux</span></a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!--  Hero Slider  -->
+    <section class="hero" aria-label="Featured destinations slideshow">
+      <div class="slides">
+
+        <!-- Slide 1 – Bali -->
+        <div class="slide active" role="img" aria-label="Bali, Indonesia">
+          <img class="slide-bg" src="https://picsum.photos/seed/bali-temple/1920/900" alt="Lush tropical scenery in Bali, Indonesia">
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-content">
+            <span class="eyebrow">Featured Destination</span>
+            <h1>Discover Paradise in Bali</h1>
+            <p>Lush rice terraces, ancient temples and world-class beaches await you on the Island of Gods.</p>
+            <a href="destinations.html" class="btn btn-primary">Explore Packages</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 – Paris -->
+        <div class="slide" role="img" aria-label="Paris, France">
+          <img class="slide-bg" src="https://picsum.photos/seed/paris-city-lights/1920/900" alt="Romantic Parisian cityscape at sunset">
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-content">
+            <span class="eyebrow">Featured Destination</span>
+            <h2 class="slide-heading">Romance Awaits in Paris</h2>
+            <p>From the Eiffel Tower to world-class cuisine, the City of Light never disappoints.</p>
+            <a href="destinations.html" class="btn btn-primary">Explore Packages</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 – Maldives -->
+        <div class="slide" role="img" aria-label="Maldives overwater villas">
+          <img class="slide-bg" src="https://picsum.photos/seed/maldives-turquoise/1920/900" alt="Crystal-clear turquoise waters and overwater bungalows in the Maldives">
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-content">
+            <span class="eyebrow">Featured Destination</span>
+            <h2 class="slide-heading">Escape to the Maldives</h2>
+            <p>Overwater villas, pristine coral reefs and breathtaking sunsets in the Indian Ocean.</p>
+            <a href="destinations.html" class="btn btn-primary">Explore Packages</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="slide-arrow prev" aria-label="Previous slide">&#8592;</button>
+      <button class="slide-arrow next" aria-label="Next slide">&#8594;</button>
+      <div class="slide-controls" role="group" aria-label="Slide navigation">
+        <button class="slide-dot active" aria-label="Go to slide 1"></button>
+        <button class="slide-dot" aria-label="Go to slide 2"></button>
+        <button class="slide-dot" aria-label="Go to slide 3"></button>
+      </div>
+    </section>
+
+    <!--  Introduction  -->
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-text reveal">
+            <span class="eyebrow">About WanderLux</span>
+            <h2 id="intro-heading">Your Journey Begins Here</h2>
+            <p>WanderLux is a newly established travel agency dedicated to crafting personalised holiday experiences. Whether you dream of a tropical escape, a European city break, or a luxury honeymoon, our expert consultants turn your vision into reality.</p>
+            <p>We handle every detail — from flights and accommodation to guided excursions and VIP transfers — so you can simply enjoy the journey.</p>
+            <a href="about.html" class="btn btn-secondary">Meet Our Team</a>
+          </div>
+          <div class="intro-img reveal reveal-d2">
+            <img src="https://picsum.photos/seed/travel-team-planning/700/500" alt="WanderLux travel consultants planning a dream holiday for clients">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Popular Packages  -->
+    <section class="section section-alt" aria-labelledby="packages-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Top Picks</span>
+          <h2 id="packages-heading">Popular Travel Packages</h2>
+          <p>Hand-picked itineraries loved by our customers — from budget escapes to luxury retreats.</p>
+        </div>
+        <div class="card-grid">
+
+          <article class="card reveal reveal-d1">
+            <img class="card-img" src="https://picsum.photos/seed/bali-rice-fields/600/400" alt="Scenic rice terraces in Ubud, Bali">
+            <div class="card-body">
+              <h3>Bali Tropical Escape</h3>
+              <p>7 nights of culture, wellness, and beach bliss across Ubud and Seminyak.</p>
+              <span class="card-price">From $1,890 per person</span>
+              <a href="calculator.html" class="btn btn-secondary">Estimate Cost</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-d2">
+            <img class="card-img" src="https://picsum.photos/seed/europe-tour-historic/600/400" alt="Historic European streets on a guided tour">
+            <div class="card-body">
+              <h3>European Grand Tour</h3>
+              <p>14 days through Paris, Rome, and Barcelona with expert local guides.</p>
+              <span class="card-price">From $4,250 per person</span>
+              <a href="calculator.html" class="btn btn-secondary">Estimate Cost</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-d3">
+            <img class="card-img" src="https://picsum.photos/seed/maldives-overwater-bungalow/600/400" alt="Romantic overwater bungalow in the Maldives at sunset">
+            <div class="card-body">
+              <h3>Maldives Honeymoon</h3>
+              <p>6 nights in a private overwater villa with sunset cruises and spa access.</p>
+              <span class="card-price">From $5,600 per couple</span>
+              <a href="calculator.html" class="btn btn-secondary">Estimate Cost</a>
+            </div>
+          </article>
+
+        </div>
+        <div class="view-all-wrap">
+          <a href="destinations.html" class="btn btn-primary">View All Destinations</a>
+        </div>
+      </div>
+    </section>
+
+    <!--  Why WanderLux  -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2 id="why-heading">The WanderLux Difference</h2>
+          <p>We go beyond booking — we create experiences tailored exactly to you.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal reveal-d1">
+            <span class="why-icon" aria-hidden="true">&#x1F9ED;</span>
+            <h3>Expert Guides</h3>
+            <p>Seasoned travel consultants with first-hand knowledge of every destination.</p>
+          </div>
+          <div class="why-item reveal reveal-d2">
+            <span class="why-icon" aria-hidden="true">&#x1F3AF;</span>
+            <h3>Tailored Packages</h3>
+            <p>Every itinerary is custom-built around your preferences and budget.</p>
+          </div>
+          <div class="why-item reveal reveal-d3">
+            <span class="why-icon" aria-hidden="true">&#x1F6DF;</span>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock assistance before, during, and after your trip.</p>
+          </div>
+          <div class="why-item reveal reveal-d4">
+            <span class="why-icon" aria-hidden="true">&#x1F48E;</span>
+            <h3>Best Price Promise</h3>
+            <p>Competitive rates and transparent pricing — no hidden fees, ever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  CTA Banner  -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-banner-inner">
+        <span class="eyebrow">Ready to Travel?</span>
+        <h2 id="cta-heading">Plan Your Dream Holiday Today</h2>
+        <p>Use our free trip cost calculator to get an instant estimate, then book a consultation with one of our expert travel consultants.</p>
+        <div class="cta-btn-group">
+          <a href="calculator.html" class="btn btn-primary">Calculate Trip Cost</a>
+          <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>WanderLux</h3>
+          <p>Your trusted travel partner for personalised holiday experiences worldwide. Explore with confidence.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="calculator.html">Trip Calculator</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact" >
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Collins Street, Melbourne VIC 3000</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +61 3 9876 5432</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> hello@wanderlux.com.au</p>
+          <p><i class="fas fa-clock" aria-hidden="true"></i> Mon–Fri, 9 AM – 6 PM AEST</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use the WanderLux Trip Cost Calculator to instantly estimate your travel costs by destination, travellers, duration, and travel style.">
+  <meta name="keywords" content="trip cost calculator, travel budget, holiday cost estimate, WanderLux">
+  <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="WanderLux home">Wander<span>Lux</span></a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow">Plan Smarter</span>
+        <h1 id="page-title">Trip Cost Calculator</h1>
+        <p>Enter your travel preferences below and get an instant cost estimate — no sign-up required.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Calculator</span>
+        </nav>
+      </div>
+    </section>
+
+    <!--  Calculator  -->
+    <section class="section" aria-labelledby="calc-heading">
+      <div class="container">
+        <div class="calculator-wrapper">
+
+          <!-- How it works -->
+          <div class="section-header section-header--mb reveal">
+            <span class="eyebrow">Instant Estimate</span>
+            <h2 id="calc-heading">How Much Will Your Trip Cost?</h2>
+            <p>Fill in the form below. Our calculator applies destination base rates, accommodation costs, and your chosen travel style to produce a personalised estimate.</p>
+          </div>
+
+          <!-- Rate info cards -->
+          <div class="calc-hint-strip reveal">
+            <div class="calc-hint-card">
+              <span class="icon" aria-hidden="true">&#x1F4B0;</span>
+              <strong>Budget</strong>
+              <small>0.8× base rate</small>
+            </div>
+            <div class="calc-hint-card">
+              <span class="icon" aria-hidden="true">&#x2B50;</span>
+              <strong>Standard</strong>
+              <small>1.0× base rate</small>
+            </div>
+            <div class="calc-hint-card">
+              <span class="icon" aria-hidden="true">&#x1F451;</span>
+              <strong>Luxury</strong>
+              <small>1.6× base rate</small>
+            </div>
+          </div>
+
+          <!-- Calculator Form -->
+          <div class="calc-card reveal">
+            <h2>Enter Your Travel Details</h2>
+            <p class="subtitle">All fields are required for an accurate estimate.</p>
+
+            <form id="calc-form" novalidate aria-label="Trip cost calculator form">
+              <div class="calc-grid">
+
+                <!-- Destination -->
+                <div class="form-group">
+                  <label for="destination">Destination <span class="req" aria-hidden="true">*</span></label>
+                  <select id="destination" name="destination" required aria-required="true" aria-describedby="destination-err">
+                    <option value="">— Select a destination —</option>
+                    <option value="bali">Bali, Indonesia</option>
+                    <option value="paris">Paris, France</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="tokyo">Tokyo, Japan</option>
+                    <option value="sydney">Sydney, Australia</option>
+                    <option value="newyork">New York, USA</option>
+                    <option value="rome">Rome, Italy</option>
+                    <option value="dubai">Dubai, UAE</option>
+                  </select>
+                  <span class="error-msg" id="destination-err" role="alert"></span>
+                </div>
+
+                <!-- Travellers -->
+                <div class="form-group">
+                  <label for="travellers">Number of Travellers <span class="req" aria-hidden="true">*</span></label>
+                  <input type="number" id="travellers" name="travellers"
+                    min="1" max="20" placeholder="e.g. 2"
+                    required aria-required="true" aria-describedby="travellers-err">
+                  <span class="error-msg" id="travellers-err" role="alert"></span>
+                </div>
+
+                <!-- Days -->
+                <div class="form-group">
+                  <label for="days">Number of Days <span class="req" aria-hidden="true">*</span></label>
+                  <input type="number" id="days" name="days"
+                    min="1" max="30" placeholder="e.g. 7"
+                    required aria-required="true" aria-describedby="days-err">
+                  <span class="error-msg" id="days-err" role="alert"></span>
+                </div>
+
+                <!-- Travel Style -->
+                <div class="form-group">
+                  <fieldset class="fieldset-clean" id="style-group" aria-describedby="style-err">
+                    <legend class="calc-legend">
+                      Travel Style <span class="req" aria-hidden="true">*</span>
+                    </legend>
+                    <div class="style-options" role="radiogroup" aria-label="Choose your travel style">
+                      <div class="style-option">
+                        <input type="radio" id="style-budget" name="style" value="budget">
+                        <label for="style-budget">&#x1F4B0; Budget</label>
+                      </div>
+                      <div class="style-option">
+                        <input type="radio" id="style-standard" name="style" value="standard">
+                        <label for="style-standard">&#x2B50; Standard</label>
+                      </div>
+                      <div class="style-option">
+                        <input type="radio" id="style-luxury" name="style" value="luxury">
+                        <label for="style-luxury">&#x1F451; Luxury</label>
+                      </div>
+                    </div>
+                    <span class="error-msg" id="style-err" role="alert"></span>
+                  </fieldset>
+                </div>
+
+                <!-- Submit -->
+                <div class="calc-full calc-submit-row">
+                  <button type="submit" class="btn btn-primary btn-wide">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>&nbsp; Calculate My Trip Cost
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- /calc-card -->
+
+          <!-- Result Panel (shown by JS) -->
+          <div id="result-panel" class="result-panel" aria-live="polite" aria-atomic="true">
+            <span class="eyebrow result-eyebrow">Your Estimate</span>
+            <span id="result-cost" class="result-cost"></span>
+            <p id="result-message" class="result-message"></p>
+
+            <div class="result-breakdown" aria-label="Cost breakdown table">
+              <table>
+                <caption class="sr-only">Detailed cost breakdown</caption>
+                <tbody>
+                  <tr>
+                    <td>Daily travel cost (all travellers)</td>
+                    <td id="bd-daily"></td>
+                  </tr>
+                  <tr>
+                    <td>Accommodation total</td>
+                    <td id="bd-accom"></td>
+                  </tr>
+                  <tr>
+                    <td>Subtotal before style</td>
+                    <td id="bd-subtotal"></td>
+                  </tr>
+                  <tr>
+                    <td>Travel style adjustment</td>
+                    <td id="bd-style"></td>
+                  </tr>
+                  <tr class="total-row">
+                    <td><strong>Estimated Total</strong></td>
+                    <td id="bd-total"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="calc-disclaimer">
+              * Estimates are indicative only. Final pricing is confirmed at time of booking.
+            </p>
+            <a href="appointment.html" class="btn btn-primary">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>&nbsp; Book This Trip
+            </a>
+          </div>
+
+        </div><!-- /calculator-wrapper -->
+      </div>
+    </section>
+
+    <!--  Destination Rate Table  -->
+    <section class="section section-alt" aria-labelledby="rates-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Transparent Pricing</span>
+          <h2 id="rates-heading">Base Rates by Destination</h2>
+          <p>Our rates are inclusive of travel and accommodation — final quotes depend on your travel style multiplier.</p>
+        </div>
+        <div class="table-scroll reveal">
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th>Destination</th>
+                <th>Daily Rate / Person</th>
+                <th>Accommodation / Night</th>
+                <th>Budget ×0.8</th>
+                <th>Standard ×1.0</th>
+                <th>Luxury ×1.6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="dest-name">&#x1F1EE;&#x1F1E9; Bali</td>
+                <td class="num">$80</td>
+                <td class="num">$60</td>
+                <td class="num budget">$112</td>
+                <td class="standard">$140</td>
+                <td class="luxury">$224</td>
+              </tr>
+              <tr>
+                <td class="dest-name">&#x1F1EB;&#x1F1F7; Paris</td>
+                <td class="num">$150</td>
+                <td class="num">$120</td>
+                <td class="num budget">$216</td>
+                <td class="standard">$270</td>
+                <td class="luxury">$432</td>
+              </tr>
+              <tr>
+                <td class="dest-name">&#x1F30A; Maldives</td>
+                <td class="num">$200</td>
+                <td class="num">$180</td>
+                <td class="num budget">$304</td>
+                <td class="standard">$380</td>
+                <td class="luxury">$608</td>
+              </tr>
+              <tr>
+                <td class="dest-name">&#x1F1EF;&#x1F1F5; Tokyo</td>
+                <td class="num">$130</td>
+                <td class="num">$100</td>
+                <td class="num budget">$184</td>
+                <td class="standard">$230</td>
+                <td class="luxury">$368</td>
+              </tr>
+              <tr>
+                <td class="dest-name">&#x1F1E6;&#x1F1FA; Sydney</td>
+                <td class="num">$120</td>
+                <td class="num">$90</td>
+                <td class="num budget">$168</td>
+                <td class="standard">$210</td>
+                <td class="luxury">$336</td>
+              </tr>
+              <tr>
+                <td class="dest-name">&#x1F1FA;&#x1F1F8; New York</td>
+                <td class="num">$160</td>
+                <td class="num">$140</td>
+                <td class="num budget">$240</td>
+                <td class="standard">$300</td>
+                <td class="luxury">$480</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">* Values shown are combined daily rate + accommodation per traveller per day, before style multiplier.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>WanderLux</h3>
+          <p>Your trusted travel partner for personalised holiday experiences worldwide. Explore with confidence.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="calculator.html">Trip Calculator</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact" >
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Collins Street, Melbourne VIC 3000</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +61 3 9876 5432</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> hello@wanderlux.com.au</p>
+          <p><i class="fas fa-clock" aria-hidden="true"></i> Mon–Fri, 9 AM – 6 PM AEST</p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
